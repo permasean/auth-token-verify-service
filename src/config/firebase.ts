@@ -6,7 +6,6 @@ dotenv.config();
 
 // Log environment variables for debugging
 console.log('Firebase Project ID:', process.env.FIREBASE_PROJECT_ID);
-console.log('hello');
 
 // Initialize Firebase Admin
 // Note: You'll need to set up your Firebase service account credentials
