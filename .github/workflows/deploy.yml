@@ -28,7 +28,7 @@ on:
       - 'main'
 
 env:
-  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  PROJECT_ID: 'project-proxy-41292'
   REGION: 'us-central1'
   SERVICE: 'auth-token-verify-service'
   NODE_ENV: 'production'
