@@ -17,6 +17,8 @@
 #    - Artifact Registry Administrator (roles/artifactregistry.admin)
 #    - Cloud Run Source Developer (roles/run.sourceDeveloper)
 #    - Firebase Admin (roles/firebase.admin)
+#
+# Note: Use the same service account as your other working projects
 
 name: 'Deploy to Cloud Run from Source'
 
