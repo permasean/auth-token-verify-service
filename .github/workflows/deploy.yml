@@ -60,7 +60,7 @@ jobs:
           source: './'
           env_vars: |
             NODE_ENV=${{ env.NODE_ENV }}
-            FIREBASE_PROJECT_ID=${{ env.PROJECT_ID }}
+            FIREBASE_PROJECT_ID=${{ env.FIREBASE_PROJECT_ID }}
 
       - name: 'Show output'
         run: |-
