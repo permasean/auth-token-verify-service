@@ -3,7 +3,7 @@ import { auth } from './config/firebase';
 import { VerifyTokenRequest, VerifyTokenResponse } from './types/auth';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 // Middleware for parsing JSON bodies
 app.use(express.json());
