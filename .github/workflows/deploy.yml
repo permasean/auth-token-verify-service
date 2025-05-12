@@ -53,6 +53,7 @@ jobs:
           service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
 
       - name: 'Deploy to Cloud Run'
+        id: 'deploy'
         uses: 'google-github-actions/deploy-cloudrun@v2'
         with:
           service: '${{ env.SERVICE }}'
@@ -60,7 +61,7 @@ jobs:
           source: './'
           env_vars: |
             NODE_ENV=${{ env.NODE_ENV }}
-            FIREBASE_PROJECT_ID=${{ env.FIREBASE_PROJECT_ID }}
+            FIREBASE_PROJECT_ID=${{ env.PROJECT_ID }}
 
       - name: 'Show output'
         run: |-
