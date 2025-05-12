@@ -15,10 +15,15 @@ if (!admin.apps.length) {
     throw new Error('FIREBASE_PROJECT_ID is not set in environment variables');
   }
 
-  admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-    projectId: process.env.FIREBASE_PROJECT_ID
-  });
+  const appConfig: admin.AppOptions = {
+    credential: admin.credential.applicationDefault()
+  };
+
+  if (process.env.FIREBASE_PROJECT_ID) {
+    appConfig.projectId = process.env.FIREBASE_PROJECT_ID;
+  }
+
+  admin.initializeApp(appConfig);
   
   console.log('Firebase Admin initialized successfully');
 }
