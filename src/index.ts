@@ -1,6 +1,9 @@
 import express, { Request, Response } from 'express';
 import { auth } from './config/firebase';
 import { VerifyTokenRequest, VerifyTokenResponse } from './types/auth';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8080;
